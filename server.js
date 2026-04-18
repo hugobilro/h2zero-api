@@ -21,7 +21,7 @@ app.post('/call', async (req, res) => {
       body: JSON.stringify({
         phone_number,
         pathway_id,
-        voice: 'e9c6bfbf-77fe-4e7d-a077-80bc4b53ef81',
+        voice: 'june',
         language: 'pt',
         max_duration: 15,
         record: true,
