@@ -3,7 +3,11 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: '*'
+}));
+
 app.use(express.json());
 
 const BLAND_API_KEY = process.env.BLAND_API_KEY;
@@ -21,7 +25,6 @@ app.post('/call', async (req, res) => {
       body: JSON.stringify({
         phone_number,
         pathway_id,
-        voice: 'june',
         language: 'pt',
         max_duration: 15,
         record: true,
